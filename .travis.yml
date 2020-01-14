@@ -4,9 +4,18 @@ rvm:
 - "2.3.6"
 - "2.4"
 - "2.5.3"
+os:
+- linux
+- osx
 
 jobs:
   include:
+    - os: windows
+      language: generic
+      install:
+        - bundle install
+      rvm:
+  
     - stage: deploy
       if: branch = master AND NOT type IN (pull_request)
       cache: false
