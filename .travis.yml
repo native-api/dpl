@@ -1,19 +1,21 @@
 language: ruby
+
+os:
+- linux
+- osx
+
 rvm:
 - "2.2.9"
 - "2.3.6"
 - "2.4"
 - "2.5.3"
-os:
-- linux
-- osx
-
 jobs:
   include:
     - os: windows
       language: generic
       install:
         - bundle install
+      # prevent printing a bogus "Ruby:" in job list
       rvm:
   
     - stage: deploy
