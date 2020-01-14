@@ -46,6 +46,9 @@ def gemspec_for(provider_name=nil, runtime_dependencies=[])
       s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n").reject {|f| f =~ Regexp.new("provider/")}
     end
     s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }.grep(Regexp.new provider_name.to_s)
+    
+    puts s._dump()
+    return s
 
    end
 end
