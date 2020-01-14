@@ -13,6 +13,8 @@ jobs:
   include:
     - os: windows
       language: generic
+      before_install:
+        - gem install bundler
       install:
         - bundle install
       # prevent printing a bogus "Ruby:" in job list
