@@ -161,7 +161,7 @@ providers.each do |provider|
     gemfile = top + t.name
     logger.info green("Writing #{gemfile}")
     gemfile.write %Q(source 'https://rubygems.org'\ngemspec :name => "dpl-#{provider}"\n)
-    sh 'cat', gemfile
+    sh 'cat', gemfile.to_s
   end
 
   desc %Q(Run dpl-#{provider} specs)
