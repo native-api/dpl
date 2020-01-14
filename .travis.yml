@@ -1,24 +1,24 @@
 language: ruby
 
-# os:
+os:
 # - linux
-# - osx
+- osx
 
-# rvm:
+rvm:
 # - "2.2.9"
 # - "2.3.6"
-# - "2.4"
+- "2.4"
 # - "2.5.3"
 jobs:
   include:
-    - os: windows
-      language: generic
-      before_install:
-        - gem install bundler
-      install:
-        - bundle install
-      # prevent printing a bogus "Ruby:" in job list
-      rvm:
+    # - os: windows
+      # language: generic
+      # before_install:
+        # - gem install bundler
+      # install:
+        # - bundle install
+      # # prevent printing a bogus "Ruby:" in job list
+      # rvm:
   
     # - stage: deploy
       # if: branch = master AND NOT type IN (pull_request)
