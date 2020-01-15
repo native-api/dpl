@@ -48,7 +48,7 @@ def gemspec_for(provider_name=nil, runtime_dependencies=[])
     s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }.grep(Regexp.new provider_name.to_s)
     
     puts s._dump()
-    return s
+    s
 
    end
 end
