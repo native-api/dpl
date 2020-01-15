@@ -14,7 +14,7 @@ jobs:
     - os: windows
       language: generic
       before_install:
-        - cmd //c "ridk install"
+        - choco install msys2
         - gem install bundler
       install:
         - bundle install
