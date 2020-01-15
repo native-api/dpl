@@ -17,7 +17,7 @@ jobs:
         - choco install msys2
         - gem install bundler
       install:
-        - bundle install
+        - ridk exec bundle install
       # prevent printing a bogus "Ruby:" in job list
       rvm:
   
