@@ -11,6 +11,7 @@ module DPL
     attr_accessor :options, :fold_count
 
     def initialize(*args)
+      puts "DPL Command line: ",args.inspect
       options = {}
       args.flatten.each do |arg|
         next options.update(arg) if arg.is_a? Hash
